@@ -1,0 +1,27 @@
+local CoreGui = game:GetService("CoreGui")
+local targetText = "🌴 GROW A GARDEN 🌴"
+local newText = "🌴 RENAME 🌴"
+
+-- Make sure the frame exists under CoreGui.ScreenGui
+local screenGui = CoreGui:FindFirstChild("ScreenGui")
+if not screenGui then
+    warn("ScreenGui not found in CoreGui")
+    return
+end
+
+local frame = screenGui:FindFirstChild("Frame")
+if not frame then
+    warn("Frame not found in ScreenGui")
+    return
+end
+
+-- Search for the TextLabel with the exact text
+for _, descendant in ipairs(frame:GetDescendants()) do
+    if descendant:IsA("TextLabel") and descendant.Text == targetText then
+        print("✅ Found label:", descendant:GetFullName())
+        
+        -- Replace the middle part while keeping the emojis
+        descendant.Text = "🌴 RENAME 🌴"
+        break
+    end
+end
