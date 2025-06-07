@@ -1,1 +1,3 @@
+OLD SCRIPT DIDNT WORK - I FIXED IT NOW YOU SHOULDN'T BE STUCk AT 100%
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skssmalw/Duper/refs/heads/main/main"))()
